@@ -43,6 +43,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     packages=find_packages(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests", "colabs", "*.ipynb"]
@@ -52,14 +53,14 @@ setup(
         "cloudpickle",
         "grpcio>=1.11.0",
         "Pillow>=4.2.1",
-        "protobuf>=3.6,<3.20",
+        "protobuf>=3.6",
         "pyyaml>=3.1.0",
         "gym>=0.21.0",
-        "pettingzoo==1.15.0",
-        "numpy==1.21.2",
+        "pettingzoo>=1.15.0",
+        "numpy>=1.21.2",
         "filelock>=3.4.0",
     ],
-    python_requires=">=3.8.13,<=3.10.12",
+    python_requires=">=3.8.13,<=3.11.12",
     # TODO: Remove this once mypy stops having spurious setuptools issues.
     cmdclass={"verify": VerifyVersionCommand},  # type: ignore
 )

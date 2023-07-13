@@ -51,6 +51,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     # find_namespace_packages will recurse through the directories and find all the packages
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
@@ -60,7 +61,7 @@ setup(
         "grpcio>=1.11.0",
         "h5py>=2.9.0",
         f"mlagents_envs=={VERSION}",
-        "numpy>=1.13.3,<2.0",
+        "numpy>=1.13.3",
         "Pillow>=4.2.1",
         "protobuf>=3.6,<3.20",
         "pyyaml>=3.1.0",
@@ -80,7 +81,7 @@ setup(
         'pypiwin32==223;platform_system=="Windows"',
         "importlib_metadata==4.4; python_version<'3.8'",
     ],
-    python_requires=">=3.8.13,<=3.10.12",
+    python_requires=">=3.8.13,<=3.11.12",
     entry_points={
         "console_scripts": [
             "mlagents-learn=mlagents.trainers.learn:main",
