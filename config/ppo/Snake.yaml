@@ -25,7 +25,7 @@ behaviors:
             extrinsic:
                 gamma: 0.99
                 strength: 1.0
-        init_path: None
+#        init_path: None
         keep_checkpoints: 5
         even_checkpoints: False
         max_steps: 5000000
