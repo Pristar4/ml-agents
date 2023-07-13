@@ -1,5 +1,5 @@
 behaviors:
-    Snake:
+    SnakeAi:
         trainer_type: ppo
         hyperparameters:
             batch_size: 1024
