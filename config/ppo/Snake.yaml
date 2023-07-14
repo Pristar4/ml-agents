@@ -2,26 +2,26 @@ behaviors:
     SnakeAi:
         trainer_type: ppo
         hyperparameters:
-            batch_size: 128
+            batch_size: 64
             buffer_size: 10240
             learning_rate: 0.0003
             beta: 0.001
-            epsilon: 0.2
+            epsilon: 0.3
             lambd: 0.99
-            num_epoch: 3
+            num_epoch: 5
             shared_critic: False
             learning_rate_schedule: linear
             beta_schedule: linear
             epsilon_schedule: linear
         network_settings:
             normalize: False
-            hidden_units: 256
+            hidden_units: 128
             num_layers: 2
             vis_encode_type: simple
 #            memory: 32
             use_recurrent: true
-            memory_size: 64
-            sequence_length: 32
+            memory_size: 16
+            sequence_length: 1
             goal_conditioning_type: hyper
             deterministic: False
         reward_signals:
@@ -31,8 +31,8 @@ behaviors:
 #        init_path: None
         keep_checkpoints: 5
         even_checkpoints: False
-        max_steps: 5000000
-        time_horizon: 1000
+        max_steps: 100000000
+        time_horizon: 64
         summary_freq: 12000
         threaded: false
 #        self_play: None
